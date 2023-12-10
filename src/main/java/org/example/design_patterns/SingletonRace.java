@@ -17,16 +17,17 @@ class MySingleton {
     static Object lock = new Object();
     private static MySingleton instance;
 
-    private MySingleton() {
-        System.out.println("New instance created by " + Thread.currentThread().threadId());
-    }
+//    private MySingleton() {
+//        System.out.println("New instance created by " + Thread.currentThread().threadId());
+//    }
 
     public static synchronized MySingleton getInstance() {
-//        synchronized (lock) {
+        synchronized (lock) {
+//            Thread.sleep(10000);
             if (instance == null) {
                 instance = new MySingleton();
             }
             return instance;
-//        }
+        }
     }
 }

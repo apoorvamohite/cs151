@@ -17,6 +17,8 @@ public class ThreadPriority {
         MyThread thread1 = new MyThread("Thread 1");
         MyThread thread2 = new MyThread("Thread 2");
 
+
+
         // Set thread priorities
         thread1.setPriority(Thread.MIN_PRIORITY); // Set the lowest priority
         thread2.setPriority(Thread.MAX_PRIORITY); // Set the highest priority
@@ -24,6 +26,9 @@ public class ThreadPriority {
         // Start the threads
         thread1.start();
         thread2.start();
+
+//        System.out.println("Thread 1 "+thread1.getPriority());
+//        System.out.println("Thread 2 "+thread2.getPriority());
     }
 }
 

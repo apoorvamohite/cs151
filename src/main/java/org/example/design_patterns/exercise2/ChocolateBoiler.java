@@ -11,7 +11,7 @@ public class ChocolateBoiler {
          */
         empty = true;
         boiled = false;
-        System.out.println("Created new instance by thread" + Thread.currentThread().threadId());
+//        System.out.println("Created new instance by thread" + Thread.currentThread().threadId());
     }
 
     public void fill() {

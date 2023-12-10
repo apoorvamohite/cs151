@@ -63,7 +63,46 @@ public enum ChocolateBoiler2 {
 }
 
 class Main2 {
+
+    void method1() {
+        try {
+            method1();
+        } catch (Exception e) {
+            System.out.println("E ");
+            throw e;
+        }
+    }
+
+    void method2() {
+        try {
+            method3();
+        } catch (Exception e) {
+            System.out.println("E2 ");
+            throw e;
+        }
+    }
+
+    void method3() {
+        try {
+            method4();
+        } catch (Exception e) {
+            System.out.println("E3 ");
+        }
+    }
+
+    void method4() {
+        try {
+            method5();
+        } catch (NumberFormatException e) {
+            System.out.println("NFE ");
+        }
+    }
+
+    void method5() {
+        int a = 1, b = 0;
+        System.out.println(a/b);
+    }
     public static void main(String[] args) {
-        ChocolateBoiler2 cb = ChocolateBoiler2.INSTANCE;
+        new Main2().method2();
     }
 }
